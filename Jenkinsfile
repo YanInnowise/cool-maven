@@ -25,7 +25,7 @@ pipeline {
         }
         stage('To nexus') {
             steps{
-                sh "mvn deploy:deploy-file -DgroupId=innowise-group -DartifactId=henceze-app -Dversion=1.0 -Dpackaging=jar -Dfile=/workspace/backend/target/my-app-1.0-SNAPSHOT.jar -DgeneratePom=false -DrepositoryId=maven  -Durl=http://172.21.0.4:8081/repository/maven/"
+                sh "mvn deploy:deploy-file -DgroupId=innowise-group -DartifactId=henceze-app -Dversion=1.0 -Dpackaging=jar -Dfile=/workspace/backend/target/my-app-1.0-SNAPSHOT.jar -DrepositoryId=maven  -Durl=http://172.21.0.4:8081/repository/maven/"
             }
         }
         
