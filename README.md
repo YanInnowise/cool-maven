@@ -13,11 +13,12 @@ And other settings will be up, when I will have display how it works.
 Maven should be install first then other plugins before pipline starts.
 #
 For correct work need to create two pipelines:
-1. backend, where java.app will have pull into Jenkins with dynamic name and start checking with Maven, which was been installed in 'dev' slave, when checking finished, our built artifact, he will be upload in Nexus repository with custom name
-2. test, where starts only if boolean parameter, which stay in backend pipeline code, be 'True'. In next step test will have make random value and create if-else job, which will have be true if random value takes digit 7 and stop with SUCCESS, in other case first pipeline will have stop with bad
+1. backend, where java.app will have pull into Jenkins with dynamic name and start checking with Maven, which was been installed in 'dev' slave, when checking finished, our built artifact, he will be upload in Nexus repository with custom name, but in pipeline's setting page need write credentials, which will shoud be keep login and password for gitlab login
+3. test, where starts only if boolean parameter, which stay in backend pipeline code, be 'True'. In next step test will have make random value and create if-else job, which will have be true if random value takes digit 7 and stop with SUCCESS, in other case first pipeline will have stop with bad
 #
 Jenkins will have two users with different permissions:
 1. dev user can see only 'backend' pipeline
 2. test user can see only 'test' pipeline
 
 ## Script for fast base build
+sudo git clone https://gitlab-trainee.inno.ws/kiryl.stetsenka/maven-simple-project.git
