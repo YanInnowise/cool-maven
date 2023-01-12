@@ -1,9 +1,4 @@
-pipeline {
-    agent { label 'dev' }
-    parameters {
-     booleanParam name: 'runTEST'   
-     }
-    
+pipeline { 
     environment {
           string_name = 'backend'
           max = 10
